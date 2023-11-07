@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.Subsystems;
+package org.firstinspires.ftc.teamcode;
 
 import com.arcrobotics.ftclib.command.SubsystemBase;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -28,8 +28,8 @@ public class ChassisTankSubsystem extends SubsystemBase {
         double leftPower;
         double rightPower;
 
-        leftPower = Range.clip(drive + turn, -1, 1);
-        rightPower = Range.clip(drive - turn, -1, 1);
+        leftPower = Range.clip(drive - turn, -1, 1);
+        rightPower = Range.clip(drive + turn, -1, 1);
 
         leftFrontMotor.setPower(leftPower);
         rightFrontMotor.setPower(rightPower);

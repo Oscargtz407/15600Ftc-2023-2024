@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.OPmodes;
+package org.firstinspires.ftc.teamcode;
 
 
 import static org.firstinspires.ftc.teamcode.Commands.DefaultDozzyIntake.IntakeMode.IN;
@@ -13,8 +13,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.Commands.DefaultDozzyIntake;
 import org.firstinspires.ftc.teamcode.Commands.DriveCommand;
-import org.firstinspires.ftc.teamcode.Commands.ServoedIntakeCommand;
-import org.firstinspires.ftc.teamcode.Subsystems.ChassisTankSubsystem;
 import org.firstinspires.ftc.teamcode.Subsystems.DozzyIntake;
 import org.firstinspires.ftc.teamcode.Subsystems.ServoedClaw;
 
@@ -39,12 +37,6 @@ public class Teleoperado extends CommandOpMode {
 
         new GamepadButton(new GamepadEx(gamepad1), GamepadKeys.Button.DPAD_LEFT)
                 .whileHeld(new DefaultDozzyIntake(dozzyIntake, STOP));
-
-        new GamepadButton(new GamepadEx(gamepad1), GamepadKeys.Button.A)
-                .whileHeld(new ServoedIntakeCommand(servoedClaw, ServoedIntakeCommand.ServoedIntakeModes.OPEN));
-
-        new GamepadButton(new GamepadEx(gamepad1), GamepadKeys.Button.B)
-                .whileHeld(new ServoedIntakeCommand(servoedClaw, ServoedIntakeCommand.ServoedIntakeModes.CLOSE));
 
         new GamepadButton(new GamepadEx(gamepad1), GamepadKeys.Button.RIGHT_BUMPER)
                 .whileHeld(new DefaultDozzyIntake(dozzyIntake, IN))

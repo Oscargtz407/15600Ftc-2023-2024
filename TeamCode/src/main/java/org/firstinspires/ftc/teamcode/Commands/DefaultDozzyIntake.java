@@ -35,11 +35,11 @@ public class DefaultDozzyIntake extends CommandBase {
                 break;
 
             case IN:
-                m_intake.setIntakePower(0.5);
+                m_intake.setIntakePower(1);
                 break;
 
             case OUT:
-                m_intake.setIntakePower(-0.85   );
+                m_intake.setIntakePower(-1);
                 break;
         }
     }

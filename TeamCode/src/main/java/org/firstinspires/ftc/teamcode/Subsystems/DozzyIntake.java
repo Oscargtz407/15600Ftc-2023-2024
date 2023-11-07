@@ -13,7 +13,7 @@ public class DozzyIntake extends SubsystemBase {
         intakeMotor = hardwareMap.get(DcMotorEx.class, "intakeMotor");
 
         intakeMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        intakeMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+        intakeMotor.setDirection(DcMotorSimple.Direction.FORWARD);
     }
 
     public void setIntakePower(double power){
